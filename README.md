@@ -68,6 +68,13 @@ http://127.0.0.1:5000/
 ```
 
 ---
+## ✅ Improvements
+
+- Added validation for uploaded files  
+- Handles invalid/non-image uploads gracefully  
+- Improved user experience with error messages  
+
+---
 
 ## ⭐️ Show Your Support
 

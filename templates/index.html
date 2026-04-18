@@ -37,6 +37,10 @@
 <img src="{{ image_url }}" style="max-width: 100%; border-radius: 15px; margin-bottom: 20px;">
 {% endif %}
 
+{% if error %}
+<p style="color:red;">{{ error }}</p>
+{% endif %}
+
 <hr>
 
 <!-- Section to display colors -->

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Extractor</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- Page Title -->
+<h1>Upload an Image</h1>
+
+<!-- Upload Form -->
+<!-- method="POST" → sends data to Flask -->
+<!-- enctype="multipart/form-data" → required for file upload -->
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image">
+
+    <label for="k">Number of Colors: <span id="k-value">5</span></label><br>
+
+    <input type="range" name="k" id="k" min="1" max="10" value="{{ k }}">
+
+    <br><br>
+    <button type="submit">Upload</button>
+</form>
+
+{% if not image_url and request.method == 'POST' %}
+<p style="color:red;">Please upload an image first.</p>
+{% endif %}
+
+{% if image_url %}
+<h3>Uploaded Image</h3>
+<img src="{{ image_url }}" style="max-width: 100%; border-radius: 15px; margin-bottom: 20px;">
+{% endif %}
+
+<hr>
+
+<!-- Section to display colors -->
+<h2>Dominant Colors</h2>
+
+<div class="colors">
+    {% for color in colors %}
+
+    <div class="color-card"
+         style="background-color: rgb({{color[0][0]}}, {{color[0][1]}}, {{color[0][2]}});">
+
+        <div class="color-code" onclick="copyToClipboard('{{color[1]}}')">
+            {{color[1]}}
+        </div>
+
+    </div>
+
+    {% endfor %}
+</div>
+<script>
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text);
+        alert("Copied: " + text);
+    }
+</script>
+<script>
+    const slider = document.getElementById("k");
+    const output = document.getElementById("k-value");
+
+    output.textContent = slider.value;
+
+    slider.oninput = function() {
+        output.textContent = this.value;
+    };
+</script>
+</body>
+</html>

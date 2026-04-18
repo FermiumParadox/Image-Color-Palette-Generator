@@ -1,0 +1,74 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fb;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+input[type="file"] {
+    margin-bottom: 15px;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+.colors {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.color-card {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    font-weight: 500;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.color-code {
+    background: rgba(0,0,0,0.4);
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+input[type="file"]::file-selector-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+}

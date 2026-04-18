@@ -3,6 +3,11 @@
 A web app that extracts dominant colors from an uploaded image using machine learning.
 
 ---
+## 🌐 Live Demo
+
+👉 https://image-color-palette-generator-7e5z.onrender.com/
+
+---
 
 ## 🖼️ Preview
 

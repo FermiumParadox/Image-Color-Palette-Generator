@@ -6,6 +6,7 @@ import os
 from dotenv import load_dotenv
 import os
 
+os.makedirs('static/uploads', exist_ok=True)
 load_dotenv()
 
 # Create the Flask app

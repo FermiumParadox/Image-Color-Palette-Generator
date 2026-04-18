@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, session
 from utils import get_dominant_colors  # import your function from utils.py
 import io
 from werkzeug.utils import secure_filename
-import os
 from dotenv import load_dotenv
 import os
 

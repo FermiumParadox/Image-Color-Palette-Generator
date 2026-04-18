@@ -47,18 +47,20 @@ http://127.0.0.1:5000/
 
 ## 📁 Project Structure
 
+```
 .
-├── static/  
-│   ├── css/  
-│   ├── uploads/  
-│   └── screenshots/  
-├── templates/  
-│   └── index.html  
-├── app.py  
-├── utils.py  
-├── requirements.txt  
-├── .env  
-└── .gitignore  
+├── static/
+│   ├── css/
+│   ├── uploads/
+│   └── screenshots/
+├── templates/
+│   └── index.html
+├── app.py
+├── utils.py
+├── requirements.txt
+├── .env
+└── .gitignore
+```
 
 ---
 
